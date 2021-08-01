@@ -1,0 +1,43 @@
+syntax = "proto3";
+package statusMessage;
+
+message AcceptEvent {
+    oneof value {
+        InitEvent init = 1;
+        StartEvent start = 2;
+        UpdateEvent update = 3;
+        EndEvent endMeeting = 4;
+        HeartbeatEvent participantsHeartbeat = 5;
+    };
+
+    string traceId = 6;
+    int64 eventCreatedAt = 7;
+}
+
+message InitEvent {
+    string callId = 1; // unique call id
+    string creationId = 2; // bridgeId
+    string name = 3; // meeting name
+    int64 time = 4; // timestamp
+    enum CreationType {
+        LOOSEN = 0;
+        FULL = 1;
+    }
+}
+
+message StartEvent {
+    string callId = 1; // unique call id
+    string creationId = 2; // bridgeId
+    string name = 3; // meeting name
+    int64 time = 4; // start time
+    int64 startTime = 5;
+}
+
+message UpdateEvent {
+}
+
+message EndEvent {
+}
+
+message HeartbeatEvent {
+}
