@@ -2,6 +2,10 @@ import sbt._
 
 object Dependencies {
 
+  val pureConfig = "com.github.pureconfig" % "pureconfig_2.13" % V.pureconfig
+
+  val mongoDriver = "org.mongodb.scala" % "mongo-scala-driver_2.13" % V.mongoDriver
+
   val scalaPb = "com.thesamet.scalapb" %% "scalapb-runtime" % V.scalaPb
   val catsEffect = "org.typelevel" %% "cats-effect" % V.catsEffect
   val fs2 = "co.fs2" %% "fs2-core" % V.fs2
@@ -23,9 +27,10 @@ object Dependencies {
     val http4s = "0.23.0"
     val pbson = "0.0.19"
     val prometheus = "0.11.0"
-    val pureconfig = "0.14.1"
+    val pureconfig = "0.16.0"
     val sttp = "3.1.9"
     val logstash = "6.6"
+    val mongoDriver = "4.3.0-beta4"
   }
 
 }

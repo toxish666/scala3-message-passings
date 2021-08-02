@@ -18,6 +18,10 @@ lazy val root = project.in(file("."))
     scalaVersion := scala3Version,
 
     libraryDependencies ++= Seq(
+      pureConfig,
+
+      mongoDriver,
+
       catsEffect,
       scalaPb,
       scalaPb % "protobuf",
