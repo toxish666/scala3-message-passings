@@ -5,7 +5,7 @@ import cats.syntax.all._
 import cats.effect.{IO, Sync}
 
 trait Wire {
-  protected lazy val conf: Configuration = Configuration()
+  protected lazy val conf: Configuration = Configuration.config
 
   def runInner[F[_]: Sync]: F[Unit] =
     for {

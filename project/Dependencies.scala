@@ -2,7 +2,7 @@ import sbt._
 
 object Dependencies {
 
-  val pureConfig = "com.github.pureconfig" % "pureconfig_2.13" % V.pureconfig
+  val pureConfig = "com.github.pureconfig" % "pureconfig-core_3" % V.pureconfig
 
   val mongoDriver = "org.mongodb.scala" % "mongo-scala-driver_2.13" % V.mongoDriver
 
