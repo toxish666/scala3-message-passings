@@ -9,7 +9,10 @@ Compile / PB.protoSources := Seq(
   baseDirectory.value / "protobuf-proto" / "kafka" / "events"
 )
 
+lazy val utils = (project in file("util"))
+
 lazy val root = project.in(file("."))
+  .aggregate(utils)
   .settings(
     name := "scala3-simple",
     version := "0.1.0",
